@@ -1,8 +1,8 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
-import MissionsContainer from './components/MissionsContainer';
-import RocketsContainer from './components/RocketsContainer';
+import MissionsContainer from './components/missions/MissionsContainer';
+import RocketsContainer from './components/rockets/RocketsContainer';
 import ProfileContainer from './components/ProfileContainer';
 
 function App() {
