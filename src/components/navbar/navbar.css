@@ -1,0 +1,25 @@
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+}
+
+.logo-holder {
+  display: flex;
+  gap: 30px;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.line {
+  border-right: 2px solid rgb(119, 112, 112);
+  height: 20px;
+}
