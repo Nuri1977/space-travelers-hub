@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { bookingRocket } from '../../redux/rockets/rockets';
+import { bookingRocket, cancelRocket } from '../../redux/rockets/rockets';
 import './oneRocket.css';
 
 const OneRocket = ({ rocket }) => {
@@ -20,23 +20,29 @@ const OneRocket = ({ rocket }) => {
     dispatch(bookingRocket(id));
   };
 
+  const canceling = (id) => {
+    dispatch(cancelRocket(id));
+  };
+
   return (
     <div className="rocket" id={id}>
       <img src={flickrImages} alt="" />
       <div className="column">
-
+        { reserved
+          ? <button type="button" className="reserved">reserved</button>
+          : ''}
         <h2 className="rocket-name">{rocketName}</h2>
         <p className="rocket-description">{description}</p>
-        {!reserved && (
-        <button type="button" onClick={() => booking(id)} className="booking-button">Reserve Rocket</button>
-        )}
+        { reserved
+          ? <button onClick={() => canceling(id)} className="cancel-button" type="button">Cancel Rocket</button>
+          : <button type="button" onClick={() => booking(id)} className="booking-button">Reserve Rocket</button>}
       </div>
     </div>
   );
 };
 
 OneRocket.defaultProps = {
-  reserved: false,
+  reserved: true,
 };
 
 OneRocket.propTypes = {
