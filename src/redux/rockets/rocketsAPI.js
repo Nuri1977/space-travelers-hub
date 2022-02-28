@@ -1,6 +1,6 @@
 import { getRockets } from './rockets';
 
-export const getRocketsFromAPI = () => async (NuriTheBoss) => {
+export const getRocketsFromAPI = () => async (nuri) => {
   const result = await fetch('https://api.spacexdata.com/v3/rockets');
   const rocketsData = await result.json();
   const rockets = rocketsData.map((data) => ({
@@ -10,7 +10,7 @@ export const getRocketsFromAPI = () => async (NuriTheBoss) => {
     flickrImages: data.flickr_images,
 
   }));
-  NuriTheBoss(getRockets(rockets));
+  nuri(getRockets(rockets));
 };
 
 export default getRocketsFromAPI;
