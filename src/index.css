@@ -32,3 +32,12 @@ ul {
 a {
   text-decoration: none;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.w-100 {
+  width: 100%;
+}

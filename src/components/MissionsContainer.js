@@ -1,19 +1,19 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getMissions } from '../redux/missions/missions';
+import MissionsList from './MissionsList';
 
 function MissionsContainer() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMissions());
+  }, []);
+
   const missions = useSelector((state) => state.missions);
   return (
     <div>
-      <h1>Missions</h1>
-      <ul>
-        {missions.map((mission) => (
-          <li key={mission.id}>
-            {' '}
-            {mission.description}
-          </li>
-        ))}
-      </ul>
+      <MissionsList missions={missions} />
     </div>
   );
 }
