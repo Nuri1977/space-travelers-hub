@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../../img/logo.png';
 import './navbar.css';
 
@@ -7,14 +8,20 @@ const Navbar = () => (
     <div className="navbar-wrapper">
       <div className="logo-holder">
         <img src={logo} alt="" />
-
-        <h1>Space Traveler&apos;s Hub</h1>
+        <h1>
+          <NavLink to="/">Space Traveler&apos;s Hub</NavLink>
+        </h1>
       </div>
       <ul>
-        <li>Rockets</li>
-        <li>Missions</li>
-        <li className="line" />
-        <li>My Profile</li>
+        <li>
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/missions" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Missions</NavLink>
+        </li>
+        <li>
+          <NavLink to="/profile" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>My profile</NavLink>
+        </li>
       </ul>
 
     </div>

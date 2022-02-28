@@ -23,3 +23,7 @@ img {
   border-right: 2px solid rgb(119, 112, 112);
   height: 20px;
 }
+
+.active {
+  color: blue;
+}
