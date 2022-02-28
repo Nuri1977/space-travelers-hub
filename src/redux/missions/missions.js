@@ -1,27 +1,22 @@
+import fetchMissionsApi from '../../api/missionsAPI';
+
 const GET_MISSONS = 'bookStore/books/GET_MISSONS';
 
-const initialState = [
-  {
-    mission_id: '9D1B7E0',
-    mission_name: 'Thaicom',
-    description: 'Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.',
-  },
-  {
-    mission_id: '9D1B7E0',
-    mission_name: 'Thaicom',
-    description: 'Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.',
-  },
-  {
-    mission_id: '9D1B7E0',
-    mission_name: 'Thaicom',
-    description: 'Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.',
-  },
-];
+const initialState = [];
 
 export const setMissions = (payload) => ({
   type: GET_MISSONS,
   payload,
 });
+
+export const getMissions = () => async (dispatch) => {
+  const missions = await fetchMissionsApi();
+  if (missions.name === 'Error') {
+    alert(missions.name);
+  } else {
+    dispatch(setMissions(missions));
+  }
+};
 
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
