@@ -1,12 +1,18 @@
 import fetchMissionsApi from '../../api/missionsAPI';
 
 const GET_MISSONS = 'bookStore/books/GET_MISSONS';
+const JOIN_MISSION = 'space-travelers-hub/missions/JOIN_MISSION';
 
 const initialState = [];
 
 export const setMissions = (payload) => ({
   type: GET_MISSONS,
   payload,
+});
+
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  id: payload,
 });
 
 export const getMissions = () => async (dispatch) => {
@@ -22,6 +28,17 @@ const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSONS:
       return action.payload;
+    case JOIN_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.mission_id !== action.id) {
+          return mission;
+        }
+
+        return { ...mission, reserved: true };
+      });
+
+      return newState;
+    }
     default:
       return state;
   }
