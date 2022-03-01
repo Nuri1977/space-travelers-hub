@@ -1,6 +1,57 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Space Travelers Hub
+
+## Live preview 
+  ## Heroku [link](https://murmuring-hollows-84269.herokuapp.com/).
+  ## Netlify [link](https://621a34b47f4ddae9c99da761--hopeful-euclid-a4fd8a.netlify.app/).
+
+
+## Screenshots
+![Example screenshot](src/img/screen.png)
+
+## Contents
+* [Home/Rockets](#home)
+* [Missions](#missions)
+* [My Profile](#myprofile)
+
+
+
+## General info
+ In this project we used the real live data from the official spaceX API. It is web application for a company that provides commercial and scientific space travel.services.The application will allow users to book rockets and join selected space missions.from the SpaceX API.
+
+ ## Technologies
+Project is created with:
+* React 
+* Redux
+* JSX
+* CSS
+* API
+
+## Setup
+To run this project, install it locally using:
+- cd Desktop
+- git clone https://github.com/Nuri1977/space-travelers-hub.git
+- cd space-travelers-hub
+- npm install
+- npm start 
+
+## Author 1
+
+👤 **Dejan Vujovic**
+
+- Github : [@VuDej](https://github.com/VuDej)
+- Twitter: [@DejanVuj](https://twitter.com/DejanVuj)
+- LinkedIn : [@Dejan-Vujovic](https://www.linkedin.com/in/dejan-vujovic-5a0672225/)
+
+## Author 2
+
+
+👤 **Nuri Lacka**
+
+- GitHub: [@Nuri1977](https://github.com/Nuri1977)
+- Twitter: [@Lackanuri](https://twitter.com/LackaNuri)
+- LinkedIn: [@nurilacka](https://www.linkedin.com/in/nuri-lacka-7141b01ba/)
 
 ## Available Scripts
 
@@ -39,32 +90,26 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions, issues, and feature requests are welcome!
 
-### Analyzing the Bundle Size
+Feel free to check the [issues page]().
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Show your support
 
-### Making a Progressive Web App
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
+- A special thanks to Microverse.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 License
 
-### Deployment
+This project is [MIT](LICENSE) licensed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Created by [@VuDej](https://github.com/VuDej) and [@Nuri1977](https://github.com/Nuri1977)

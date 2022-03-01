@@ -1,7 +1,14 @@
 .navbar-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 30px 150px;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.logo-holder h1 {
+  color: rgb(75, 73, 73);
 }
 
 .logo-holder {
@@ -12,6 +19,10 @@
 ul {
   display: flex;
   gap: 20px;
+}
+
+ul p {
+  color: #3998ff;
 }
 
 img {
@@ -25,5 +36,6 @@ img {
 }
 
 .active {
-  color: blue;
+  text-decoration: underline;
+  text-decoration-color: #3998ff;
 }

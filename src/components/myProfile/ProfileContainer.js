@@ -1,4 +1,5 @@
 import React from 'react';
+import ReservedMissions from '../missions/ReservedMissions';
 import ReservedRockets from '../rockets/reservedList';
 import './myProfile.css';
 
@@ -7,7 +8,9 @@ const ProfileContainer = () => (
     <div className="rockets">
       <ReservedRockets />
     </div>
-    <div className="missions" />
+    <div className="missions">
+      <ReservedMissions />
+    </div>
   </section>
 );
 
