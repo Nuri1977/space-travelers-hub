@@ -9,7 +9,7 @@ const Rockets = () => {
     <section className="rockets-wrapper">
       {rocketsArr.map((rocket) => (
         <div key={rocket.id} id={rocket.id} className="rocket-card">
-          <OneBook rocket={rocket} />
+          <OneBook rockets={rocket} />
         </div>
       ))}
     </section>

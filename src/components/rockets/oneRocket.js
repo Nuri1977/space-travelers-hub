@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { bookingRocket, cancelRocket } from '../../redux/rockets/rockets';
 import './oneRocket.css';
 
-const OneRocket = ({ rocket }) => {
+const OneRocket = ({ rockets }) => {
   const {
 
     id,
@@ -12,7 +12,7 @@ const OneRocket = ({ rocket }) => {
     description,
     flickrImages,
     reserved,
-  } = rocket;
+  } = rockets;
 
   const dispatch = useDispatch();
 
@@ -49,10 +49,22 @@ OneRocket.defaultProps = {
   reserved: false,
 };
 
+OneRocket.defaultProps = {
+  rocketName: true,
+};
+
+OneRocket.defaultProps = {
+  description: true,
+};
+
+OneRocket.defaultProps = {
+  rockets: true,
+};
+
 OneRocket.propTypes = {
-  rocketName: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  rocket: PropTypes.func.isRequired,
+  rocketName: PropTypes.string,
+  description: PropTypes.string,
+  rockets: PropTypes.func,
   reserved: PropTypes.bool,
 };
 
