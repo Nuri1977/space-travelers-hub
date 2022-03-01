@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import MissionsContainer from './components/missions/MissionsContainer';
 import RocketsContainer from './components/rockets/RocketsContainer';
-import ProfileContainer from './components/ProfileContainer';
+import ProfileContainer from './components/myProfile/ProfileContainer';
 
 function App() {
   return (
