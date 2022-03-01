@@ -41,3 +41,8 @@ a {
 .w-100 {
   width: 100%;
 }
+
+.container {
+  max-width: 1060px;
+  margin: auto;
+}

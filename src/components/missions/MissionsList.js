@@ -4,20 +4,20 @@ import MissionItem from './MissionItem';
 
 function MissionsList({ missions }) {
   return (
-    <ul>
-      <li>
-        <h3>Mission</h3>
-        <h3>Descrition</h3>
-        <h3>Status</h3>
-        <h3>Status1</h3>
-      </li>
+    <table>
+      <tr>
+        <th>Mission</th>
+        <th>Descrition</th>
+        <th>Status</th>
+        <th>Status1</th>
+      </tr>
       {missions.map((mission) => (
         <MissionItem
           key={mission.mission_id}
           mission={mission}
         />
       ))}
-    </ul>
+    </table>
   );
 }
 
