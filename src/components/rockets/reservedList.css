@@ -1,0 +1,17 @@
+.reserved-list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.reserved-list h2 {
+  font-size: 30px;
+  color: #525050;
+  margin-bottom: 30px;
+}
+
+.reserved-list p {
+  font-size: 20px;
+  color: rgb(82, 80, 80);
+  margin-bottom: 10px;
+  text-justify: auto;
+}

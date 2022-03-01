@@ -42,7 +42,7 @@ const OneRocket = ({ rocket }) => {
 };
 
 OneRocket.defaultProps = {
-  reserved: true,
+  reserved: false,
 };
 
 OneRocket.propTypes = {
