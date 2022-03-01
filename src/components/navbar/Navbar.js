@@ -4,7 +4,7 @@ import logo from '../../img/logo.png';
 import './navbar.css';
 
 const Navbar = () => (
-  <nav className="navbar">
+  <nav className="navbar container">
     <div className="navbar-wrapper">
       <div className="logo-holder">
         <img src={logo} alt="" />

@@ -1,7 +1,7 @@
 .navbar-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 20px 100px;
+  padding: 20px 0;
 }
 
 .logo-holder {
