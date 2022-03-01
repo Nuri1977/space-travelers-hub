@@ -1,19 +1,15 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { getRocketsFromAPI } from '../../redux/rockets/rocketsAPI';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import OneBook from './oneRocket';
+import './container.css';
 
 const Rockets = () => {
   const rocketsArr = useSelector((state) => state.reducerRockets);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getRocketsFromAPI());
-  }, []);
   return (
     <section className="rockets-wrapper">
       {rocketsArr.map((rocket) => (
         <div key={rocket.id} id={rocket.id} className="rocket-card">
-          <OneBook rocket={rocket} />
+          <OneBook rockets={rocket} />
         </div>
       ))}
     </section>

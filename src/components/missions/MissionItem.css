@@ -5,6 +5,7 @@
   border: none;
   outline: none;
   padding: 5px;
+  width: 100px;
 }
 
 .badge-secondary {
@@ -14,6 +15,7 @@
   border: none;
   outline: none;
   padding: 5px;
+  width: 100px;
 }
 
 .btn-primary {
@@ -22,7 +24,8 @@
   border-radius: 5px;
   border: 1px solid grey;
   outline: grey;
-  padding: 5px;
+  padding: 10px 5px;
+  width: 100px;
 }
 
 .btn-secondary {
@@ -31,7 +34,8 @@
   border-radius: 5px;
   border: 1px solid red;
   outline: red;
-  padding: 5px;
+  padding: 10px 5px;
+  width: 100px;
 }
 
 .align-left {

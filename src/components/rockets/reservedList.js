@@ -4,7 +4,6 @@ import './reservedList.css';
 
 const ReservedRockets = () => {
   const allRockets = useSelector((state) => state.reducerRockets);
-
   const reserved = allRockets.filter((rocket) => rocket.reserved);
   return (
     <section className="reserved-list">
@@ -12,7 +11,7 @@ const ReservedRockets = () => {
 
       {
           reserved.map((item) => (
-            <div key={item.id}><p>{item.rocketName}</p></div>
+            <div className="reserved-rocket" key={item.id}><p>{item.rocketName}</p></div>
           ))
         }
     </section>

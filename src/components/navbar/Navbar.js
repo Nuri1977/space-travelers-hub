@@ -4,23 +4,23 @@ import logo from '../../img/logo.png';
 import './navbar.css';
 
 const Navbar = () => (
-  <nav className="navbar container">
+  <nav className="">
     <div className="navbar-wrapper">
       <div className="logo-holder">
         <img src={logo} alt="" />
-        <h1>
-          <NavLink to="/">Space Traveler&apos;s Hub</NavLink>
-        </h1>
+
+        <h1>Space Traveler&apos;s Hub</h1>
+
       </div>
       <ul>
         <li>
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Home</NavLink>
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}><p>Home</p></NavLink>
         </li>
         <li>
-          <NavLink to="/missions" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Missions</NavLink>
+          <NavLink to="/missions" className={({ isActive }) => (isActive ? 'active' : 'inactive')}><p>Missions</p></NavLink>
         </li>
         <li>
-          <NavLink to="/profile" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>My profile</NavLink>
+          <NavLink to="/profile" className={({ isActive }) => (isActive ? 'active' : 'inactive')}><p>My profile</p></NavLink>
         </li>
       </ul>
 

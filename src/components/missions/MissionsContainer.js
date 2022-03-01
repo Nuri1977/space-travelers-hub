@@ -1,16 +1,9 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { getMissions } from '../../redux/missions/missions';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import MissionItem from './MissionItem';
 import './MissionsContainer.css';
 
 function MissionsContainer() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    getMissions()(dispatch);
-  }, []);
-
   const missions = useSelector((state) => state.missions);
   return (
     <div className="container">

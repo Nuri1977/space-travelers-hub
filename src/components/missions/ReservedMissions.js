@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './reservedMissions.css';
 
 function ReservedMissions() {
   const allMissions = useSelector((state) => state.missions);
@@ -11,7 +12,7 @@ function ReservedMissions() {
 
       {
         reserved.map((item) => (
-          <div key={item.id}><p>{item.mission_name}</p></div>
+          <div className="reserved-mission" key={item.id}><p>{item.mission_name}</p></div>
         ))
       }
     </section>
