@@ -13,7 +13,7 @@ const Rockets = () => {
     <section className="rockets-wrapper">
       {rocketsArr.map((rocket) => (
         <div key={rocket.id} id={rocket.id} className="rocket-card">
-          <OneBook prop={rocket} />
+          <OneBook rocket={rocket} />
         </div>
       ))}
     </section>
