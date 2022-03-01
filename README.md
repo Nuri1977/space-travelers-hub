@@ -3,8 +3,8 @@
 # Space Travelers Hub
 
 ## Live preview 
-  ## Heroku [link](https://murmuring-hollows-84269.herokuapp.com/).
-  ## Netlify [link](https://621a34b47f4ddae9c99da761--hopeful-euclid-a4fd8a.netlify.app/).
+  ## Heroku [link]().
+  ## Netlify [link]().
 
 
 ## Screenshots
