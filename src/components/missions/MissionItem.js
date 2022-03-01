@@ -1,27 +1,41 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../../redux/missions/missions';
+import './MissionItem.css';
 
 function MissionItem({ mission }) {
+  const {
+    mission_name, mission_id, description, reserved,
+  } = mission;
   const dispatch = useDispatch();
   const handleJoin = () => {
-    dispatch(joinMission(mission.mission_id));
+    dispatch(joinMission(mission_id));
   };
 
   const handleLeave = () => {
-    dispatch(leaveMission(mission.mission_id));
+    dispatch(leaveMission(mission_id));
   };
+
   return (
     <tr>
-      <td className="mis-name">{mission.mission_name}</td>
-      <td className="mis-descriptions">{mission.description}</td>
+      <td className="mis-name align-left">
+        <h3>{mission_name}</h3>
+      </td>
+      <td className="mis-descriptions align-left">{description}</td>
       <td className="mis-btn1">
-        <button type="button">Not a member</button>
+        {reserved
+          ? <button type="button" className="badge-secondary">Active member</button>
+          : <button type="button" className="badge-primary">Not a member</button>}
+
       </td>
       <td className="mis-btn2">
-        <button type="button" onClick={handleJoin}>Join Mission</button>
-        <button type="button" onClick={handleLeave}>Leave Mission</button>
+        {!reserved
+          ? (
+            <button type="button" className="btn-primary" onClick={handleJoin}>Join Mission</button>
+          )
+          : <button type="button" className="btn-secondary" onClick={handleLeave}>Leave Mission</button>}
       </td>
     </tr>
   );
@@ -32,6 +46,7 @@ MissionItem.propTypes = {
     mission_name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     mission_id: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
   }).isRequired,
 };
 

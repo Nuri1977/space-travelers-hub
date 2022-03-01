@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions } from '../../redux/missions/missions';
-import MissionsList from './MissionsList';
+import MissionItem from './MissionItem';
 import './MissionsContainer.css';
 
 function MissionsContainer() {
@@ -14,7 +14,24 @@ function MissionsContainer() {
   const missions = useSelector((state) => state.missions);
   return (
     <div className="container">
-      <MissionsList missions={missions} />
+      <table>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Descrition</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <MissionItem
+              key={mission.mission_id}
+              mission={mission}
+            />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
