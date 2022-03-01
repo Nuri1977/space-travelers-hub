@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRocketsFromAPI } from '../../redux/rockets/rocketsAPI';
 import OneBook from './oneRocket';
+import './container.css';
 
 const Rockets = () => {
   const rocketsArr = useSelector((state) => state.reducerRockets);

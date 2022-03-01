@@ -1,0 +1,9 @@
+.rockets-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  margin-top: 50px;
+}

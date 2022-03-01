@@ -28,11 +28,15 @@ const OneRocket = ({ rocket }) => {
     <div className="rocket" id={id}>
       <img src={flickrImages} alt="" />
       <div className="column">
-        { reserved
-          ? <button type="button" className="reserved">reserved</button>
-          : ''}
         <h2 className="rocket-name">{rocketName}</h2>
-        <p className="rocket-description">{description}</p>
+        <div className="badge">
+
+          { reserved
+            ? <button type="button" className="reserved">reserved</button>
+            : ''}
+
+          <p className="rocket-description">{description}</p>
+        </div>
         { reserved
           ? <button onClick={() => canceling(id)} className="cancel-button" type="button">Cancel Rocket</button>
           : <button type="button" onClick={() => booking(id)} className="booking-button">Reserve Rocket</button>}
