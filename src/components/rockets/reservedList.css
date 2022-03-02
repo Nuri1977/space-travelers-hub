@@ -1,0 +1,32 @@
+.reserved-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 0 200px;
+}
+
+.reserved-list h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #525050;
+  margin-bottom: 30px;
+}
+
+.reserved-rocket {
+  border: 1px solid #000;
+  padding: 7px;
+  margin-bottom: 3px;
+  align-items: center;
+}
+
+.reserved-rocket:nth-child(odd) {
+  background-color: rgb(231, 227, 227);
+}
+
+.reserved-list p {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(82, 80, 80);
+  text-align: center;
+  margin-bottom: 3px;
+}

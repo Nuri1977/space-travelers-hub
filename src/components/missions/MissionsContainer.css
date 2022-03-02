@@ -1,0 +1,15 @@
+.container {
+  margin-top: 50px;
+}
+
+table,
+td,
+th {
+  border: 1px solid;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
