@@ -46,7 +46,7 @@ MissionItem.propTypes = {
     mission_name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     mission_id: PropTypes.string.isRequired,
-    reserved: PropTypes.bool.isRequired,
+    reserved: PropTypes.bool,
   }).isRequired,
 };
 
