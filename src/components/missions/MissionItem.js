@@ -25,17 +25,20 @@ function MissionItem({ mission }) {
       </td>
       <td className="mis-descriptions align-left">{description}</td>
       <td className="mis-btn1">
-        {reserved
-          ? <button type="button" className="badge-secondary">Active member</button>
-          : <button type="button" className="badge-primary">Not a member</button>}
-
+        {reserved && (
+          <button type="button" className="badge-secondary">Active member</button>
+        )}
+        {!reserved && (
+          <button type="button" className="badge-primary">Not a member</button>
+        )}
       </td>
       <td className="mis-btn2">
-        {!reserved
-          ? (
-            <button type="button" className="btn-primary" onClick={handleJoin}>Join Mission</button>
-          )
-          : <button type="button" className="btn-secondary" onClick={handleLeave}>Leave Mission</button>}
+        {reserved && (
+          <button type="button" className="btn-secondary" onClick={handleLeave}>Leave Mission</button>
+        )}
+        {!reserved && (
+          <button type="button" className="btn-primary" onClick={handleJoin}>Join Mission</button>
+        )}
       </td>
     </tr>
   );
