@@ -12,7 +12,7 @@ function ReservedMissions() {
 
       {
         reserved.map((item) => (
-          <div className="reserved-mission" key={item.id}><p>{item.mission_name}</p></div>
+          <div className="reserved-mission" key={item.mission_id}><p>{item.mission_name}</p></div>
         ))
       }
     </section>

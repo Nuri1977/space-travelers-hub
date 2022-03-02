@@ -8,11 +8,17 @@ const Rockets = () => {
   return (
     <section className="rockets-wrapper">
       {rocketsArr.map((rocket) => (
-        <div key={rocket.id} id={rocket.id} className="rocket-card">
-          <OneBook rockets={rocket} />
-        </div>
+        <OneBook
+          key={rocket.id}
+          rocketName={rocket.rocketName}
+          flickrImages={rocket.flickrImages[0]}
+          description={rocket.description}
+          id={rocket.id}
+          reserved={rocket.reserved}
+        />
       ))}
     </section>
+
   );
 };
 export default Rockets;

@@ -2,9 +2,8 @@
 
 # Space Travelers Hub
 
-## Live preview 
-  ## Heroku [link]().
-  ## Netlify [link]().
+## Live preview
+  ## Netlify [link](https://affectionate-raman-1eac0c.netlify.app/)
 
 
 ## Screenshots
@@ -22,7 +21,7 @@
 
  ## Technologies
 Project is created with:
-* React 
+* React
 * Redux
 * JSX
 * CSS
@@ -34,7 +33,7 @@ To run this project, install it locally using:
 - git clone https://github.com/Nuri1977/space-travelers-hub.git
 - cd space-travelers-hub
 - npm install
-- npm start 
+- npm start
 
 ## Author 1
 

@@ -4,16 +4,13 @@ import PropTypes from 'prop-types';
 import { bookingRocket, cancelRocket } from '../../redux/rockets/rockets';
 import './oneRocket.css';
 
-const OneRocket = ({ rockets }) => {
-  const {
-
-    id,
-    rocketName,
-    description,
-    flickrImages,
-    reserved,
-  } = rockets;
-
+const OneRocket = ({
+  id,
+  rocketName,
+  description,
+  flickrImages,
+  reserved,
+}) => {
   const dispatch = useDispatch();
 
   const booking = (id) => {
@@ -31,15 +28,18 @@ const OneRocket = ({ rockets }) => {
         <h2 className="rocket-name">{rocketName}</h2>
         <div className="badge">
 
-          { reserved
-            ? <button type="button" className="reserved">reserved</button>
-            : ''}
+          {reserved && (
+          <button type="button" className="reserved">reserved</button>
+          )}
 
           <p className="rocket-description">{description}</p>
         </div>
-        { reserved
-          ? <button onClick={() => canceling(id)} className="cancel-button" type="button">Cancel Rocket</button>
-          : <button type="button" onClick={() => booking(id)} className="booking-button">Reserve Rocket</button>}
+        {reserved && (
+        <button onClick={() => canceling(id)} className="cancel-button" type="button">Cancel Rocket</button>
+        )}
+        {!reserved && (
+          <button type="button" onClick={() => booking(id)} className="booking-button">Reserve Rocket</button>
+        )}
       </div>
     </div>
   );
@@ -49,22 +49,11 @@ OneRocket.defaultProps = {
   reserved: false,
 };
 
-OneRocket.defaultProps = {
-  rocketName: true,
-};
-
-OneRocket.defaultProps = {
-  description: true,
-};
-
-OneRocket.defaultProps = {
-  rockets: true,
-};
-
 OneRocket.propTypes = {
-  rocketName: PropTypes.string,
-  description: PropTypes.string,
-  rockets: PropTypes.func,
+  id: PropTypes.number.isRequired,
+  rocketName: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  flickrImages: PropTypes.string.isRequired,
   reserved: PropTypes.bool,
 };
 
