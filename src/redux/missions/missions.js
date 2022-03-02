@@ -23,11 +23,7 @@ export const leaveMission = (payload) => ({
 
 export const getMissions = () => async (dispatch) => {
   const missions = await fetchMissionsApi();
-  if (missions.name === 'Error') {
-    alert(missions.name);
-  } else {
-    dispatch(setMissions(missions));
-  }
+  dispatch(setMissions(missions));
 };
 
 const missionsReducer = (state = initialState, action) => {
