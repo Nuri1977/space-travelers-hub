@@ -23,7 +23,7 @@ const OneRocket = ({
 
   return (
     <div className="rocket" id={id}>
-      <img src={flickrImages} alt="" />
+      <img src={flickrImages} alt="" className="rocket-img" />
       <div className="column">
         <h2 className="rocket-name">{rocketName}</h2>
         <div className="badge">
@@ -35,10 +35,10 @@ const OneRocket = ({
           <p className="rocket-description">{description}</p>
         </div>
         {reserved && (
-        <button onClick={() => canceling(id)} className="cancel-button" type="button">Cancel Rocket</button>
+        <button onClick={() => canceling(id)} className="cancel-button" type="button">Cancel</button>
         )}
         {!reserved && (
-          <button type="button" onClick={() => booking(id)} className="booking-button">Reserve Rocket</button>
+          <button type="button" onClick={() => booking(id)} className="booking-button">Reserve</button>
         )}
       </div>
     </div>

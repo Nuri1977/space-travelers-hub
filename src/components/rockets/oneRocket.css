@@ -80,3 +80,84 @@
 .rocket:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+
+@media screen and (max-width: 720px) {
+  .rocket {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rocket-img {
+    margin: auto;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+  }
+
+  .column h2 {
+    align-self: flex-start;
+    font-size: 17px;
+  }
+
+  .column p {
+    font-size: 14px;
+  }
+
+  .rocket img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .badge {
+    display: flex;
+    font-size: 8px;
+  }
+
+  .rocket-description {
+    font-size: 20px;
+  }
+
+  .reserved {
+    background-color: #3998ff;
+    color: white;
+    padding: 7px;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    align-self: start;
+    margin: 5px 10px;
+  }
+
+  .booking-button {
+    background-color: #3998ff;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    align-self: start;
+    margin-top: 10px;
+    width: 70px;
+    cursor: pointer;
+  }
+
+  .cancel-button {
+    background-color: #fff;
+    color: rgb(82, 80, 80);
+    padding: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-radius: 5px;
+    align-self: start;
+    margin-top: 10px;
+    width: 70px;
+    cursor: pointer;
+  }
+}

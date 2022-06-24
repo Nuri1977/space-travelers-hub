@@ -19,7 +19,7 @@ function MissionItem({ mission }) {
   };
 
   return (
-    <tr>
+    <tr className="table">
       <td className="mis-name align-left">
         <h3>{mission_name}</h3>
       </td>
